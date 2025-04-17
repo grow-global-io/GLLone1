@@ -25,6 +25,7 @@ jobs:
       - name: Running Build Commands
         run: |
           npm run build
+          
 
       - name: Deploying to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
