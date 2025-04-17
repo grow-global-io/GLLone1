@@ -1,0 +1,137 @@
+/* Base styling reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* App background - dark gradient */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #12091D 0%, #1E0F33 100%);
+  color: white;
+  text-align: center;
+}
+
+/* Content area with padding to account for fixed header */
+.content {
+  padding-top: 120px; /* Space for the fixed header */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff0090, #00BFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* Keep the remaining styles for backwards compatibility with other components */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Down arrow styling */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+  color: white;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-arrow:hover {
+  transform: translateY(5px);
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}
+
+/* Next section styling */
+.next-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #1E0F33 0%, #12091D 100%);
+}
+
+.next-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00BFFF, #ff0090);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.next-section p {
+  max-width: 800px;
+  text-align: center;
+}

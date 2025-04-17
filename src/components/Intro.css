@@ -1,0 +1,57 @@
+.content {
+  padding-top: 120px; /* Space for the fixed header */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff0090, #00BFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* Down arrow styling */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+  color: white;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-arrow:hover {
+  transform: translateY(5px);
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+} 

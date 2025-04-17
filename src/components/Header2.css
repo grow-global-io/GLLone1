@@ -1,0 +1,229 @@
+.header2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Timer bar with countdown */
+.timer-bar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  position: relative;
+}
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.countdown-item {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.countdown-number {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.share-price-btn {
+  position: absolute;
+  right: 40px;
+}
+
+.share-price-btn button {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+/* Contact bar */
+.contact-bar {
+  background: linear-gradient(to right, #3a0f3d, #221344);
+  padding: 12px 0;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.contact-item span {
+  font-size: 1.1rem;
+}
+
+/* Main navigation */
+.main-nav {
+  background-color: rgba(18, 9, 29, 0.9);
+  padding: 15px 0;
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.mode-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.mode-text {
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff0090, #00BFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.mode-o {
+  color: #9932CC;
+}
+
+.mobile-text {
+  font-size: 1rem;
+  color: white;
+  margin-left: 50px;
+  margin-top: -5px;
+}
+
+.investment-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.investment-nav li {
+  margin: 0 20px;
+}
+
+.investment-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.investment-nav a:hover {
+  color: #ff0090;
+}
+
+.invest-now-btn {
+  background-color: #ff0090;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.invest-now-btn:hover {
+  background-color: #ff2ca8 !important;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 0, 144, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contact-container {
+    gap: 20px;
+  }
+  
+  .investment-nav li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown-container {
+    gap: 8px;
+  }
+  
+  .share-price-btn {
+    position: static;
+    margin-left: 15px;
+  }
+  
+  .share-price-btn button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mode-text {
+    font-size: 1.8rem;
+  }
+  
+  .mobile-text {
+    font-size: 0.9rem;
+    margin-left: 40px;
+  }
+  
+  .investment-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .investment-nav li {
+    margin: 5px;
+  }
+} 

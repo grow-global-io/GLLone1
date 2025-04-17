@@ -1,0 +1,136 @@
+/* Next section styling */
+.next-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #1E0F33 0%, #12091D 100%);
+}
+
+.next-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00BFFF, #ff0090);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.next-section p {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Founding story section styling */
+.founding-story-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #12091D 0%, #1E0F33 100%);
+  color: white;
+}
+
+.founding-story-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Text column */
+.founding-story-text {
+  flex: 1;
+  text-align: left;
+}
+
+.section-subtitle {
+  color: #ff0090;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.story-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.highlighted-text {
+  font-weight: bold;
+  color: white;
+}
+
+/* Image column */
+.founding-story-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 144, 0.3);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.image-container img {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  z-index: 1;
+  object-fit: cover;
+  height: auto;
+}
+
+.image-caption {
+  position: relative;
+  text-align: right;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  z-index: 1;
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  .founding-story-content {
+    flex-direction: column;
+  }
+  
+  .founding-story-text {
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
+} 

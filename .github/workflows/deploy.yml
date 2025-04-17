@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deployment of the React App
+
+jobs:
+  Web-Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking out the code
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Running Install Commands
+        run: |
+          npm install
+
+      - name: Running Build Commands
+        run: |
+          npm run build
+
+      - name: Deploying to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/

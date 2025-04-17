@@ -1,0 +1,339 @@
+.vision-section {
+  background-color: #110423;
+  color: white;
+  padding: 100px 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced background effects */
+.vision-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(135, 38, 183, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 144, 0.15) 0%, transparent 40%);
+  z-index: 1;
+}
+
+.vision-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  gap: 40px;
+}
+
+.vision-content {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vision-subtitle {
+  color: #ff0090;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add a subtle line decoration to the subtitle */
+.vision-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff0090, transparent);
+}
+
+.vision-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  background: linear-gradient(120deg, #ffffff, #d0d0d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  text-align: center;
+  width: 100%;
+}
+
+.vision-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  align-self: flex-start;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.vision-description p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.vision-image-container {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+
+/* Create a floating effect for the image */
+@keyframes float {
+  0% { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateY(0px); }
+  50% { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateY(-10px); }
+  100% { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateY(0px); }
+}
+
+.vision-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 0, 144, 0.2);
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a hover effect */
+.vision-image-wrapper:hover {
+  transform: perspective(1000px) rotateY(-10deg) rotateX(3deg) scale(1.02);
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 0, 144, 0.3);
+}
+
+.vision-image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 0, 144, 0.3) 0%, rgba(0, 191, 255, 0.3) 100%);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.vision-image-wrapper:hover::before {
+  opacity: 0.5;
+}
+
+/* Add a frame effect around the image */
+.vision-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.vision-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.05); /* Slightly oversized to hide border edges */
+  transition: transform 0.5s ease;
+}
+
+.vision-image-wrapper:hover .vision-image {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .vision-title {
+    font-size: 3.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .vision-section {
+    padding: 100px 0;
+  }
+
+  .vision-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 80px;
+  }
+  
+  .vision-content {
+    padding-right: 0;
+    max-width: 100%;
+  }
+  
+  .vision-subtitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+  
+  .vision-title {
+    font-size: 3rem;
+  }
+  
+  .vision-image-container {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .vision-image-wrapper {
+    animation: none;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  }
+  
+  .vision-description {
+    text-align: center;
+    align-self: center;
+    padding-left: 0;
+  }
+  
+  .vision-description p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-section {
+    padding: 70px 0;
+  }
+  
+  .vision-container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+  
+  .vision-title {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .vision-description {
+    font-size: 0.95rem;
+  }
+  
+  .vision-image-container {
+    max-width: 320px;
+  }
+  
+  .vision-image-wrapper {
+    transform: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 144, 0.2);
+  }
+  
+  .vision-image-wrapper:hover {
+    transform: none;
+  }
+}
+
+/* Animation styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.animate-element.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Force the subtitle to be visible immediately if it's in the viewport on load */
+.vision-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Let the animation system take over when it's properly observed */
+.vision-subtitle.animate-element:not(.animate-in) {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Staggered animations */
+.vision-subtitle.animate-in {
+  transition-delay: 0.1s;
+}
+
+.vision-title.animate-in {
+  transition-delay: 0.3s;
+}
+
+.vision-description.animate-in {
+  transition-delay: 0.5s;
+}
+
+.vision-image-container.animate-in {
+  transition-delay: 0.7s;
+}
+
+/* Image decoration */
+.image-decoration {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 80%;
+  height: 80%;
+  border: 1px solid rgba(255, 0, 144, 0.3);
+  border-radius: 20px;
+  z-index: 0;
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 0.5s;
+} 
