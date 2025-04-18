@@ -10,13 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checking out the code
+      - name: Get Latest Code
         uses: actions/checkout@v3
 
       - name: Setting up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
+      - name: 🔄 Rename .env.sample to .env
+        run: mv .env.sample .env
 
       - name: Running Install Commands
         run: |
