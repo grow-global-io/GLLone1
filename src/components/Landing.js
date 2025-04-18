@@ -1,39 +1,63 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Landing.css';
 
 import landingVideo from '../assets/video1.mp4';
 const Landing = () => {
   const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
+    let playAttemptTimeout;
+    
+    // Initial play attempt with a small delay to let the component fully mount
+    if (videoRef.current) {
+      playAttemptTimeout = setTimeout(() => {
+        videoRef.current.play()
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch(error => {
+            console.log("Video play failed:", error);
+            // If autoplay fails, keep it muted and try again
+            videoRef.current.muted = true;
+            videoRef.current.play()
+              .then(() => setIsPlaying(true))
+              .catch(e => console.log("Couldn't play even when muted:", e));
+          });
+      }, 300);
+    }
+
     const handleScroll = () => {
-      if (videoRef.current) {
-        // Get the position of the video element
-        const rect = videoRef.current.getBoundingClientRect();
-        const videoTop = rect.top;
-        const videoBottom = rect.bottom;
-        const windowHeight = window.innerHeight;
-        
-        // If video is more than 50% out of view, mute it
-        if (videoTop > windowHeight || videoBottom < 0) {
-          videoRef.current.muted = true;
-        } else {
-          videoRef.current.muted = false;
-        }
+      if (!videoRef.current || !isPlaying) return;
+      
+      // Get the position of the video element
+      const rect = videoRef.current.getBoundingClientRect();
+      const videoTop = rect.top;
+      const videoBottom = rect.bottom;
+      const windowHeight = window.innerHeight;
+      
+      // Calculate how much of the video is visible
+      const visibleHeight = Math.min(windowHeight, videoBottom) - Math.max(0, videoTop);
+      const videoHeight = rect.height;
+      const visiblePercentage = (visibleHeight / videoHeight) * 100;
+      
+      // Only change mute state, don't pause/play
+      if (visiblePercentage < 30) {
+        videoRef.current.muted = true;
+      } else {
+        videoRef.current.muted = false;
       }
     };
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
     
-    // Initial check
-    handleScroll();
-    
     // Clean up
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      clearTimeout(playAttemptTimeout);
     };
-  }, []);
+  }, [isPlaying]);
 
   return (
     <section className="landing">
@@ -56,10 +80,18 @@ const Landing = () => {
             src={landingVideo}
             autoPlay
             loop
-            muted
             playsInline
+            preload="auto"
             className="landing-image"
-            alt="EarnPhone promotional video"
+            controls
+            onClick={() => {
+              if (videoRef.current) {
+                videoRef.current.muted = false;
+                videoRef.current.play();
+              }
+            }}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
           />
           <div className="image-overlay"></div>
         </div>
