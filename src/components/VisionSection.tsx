@@ -7,7 +7,7 @@ const VisionSection = () => {
   const subtitleRef = useRef(null);
   const titleRef = useRef(null);
   const contentRef = useRef(null);
-  const imageRef = useRef(null);
+  const secondContentRef = useRef(null);
 
   // Handle scroll animations
   useEffect(() => {
@@ -22,17 +22,24 @@ const VisionSection = () => {
       { threshold: 0.1 }
     );
 
+    // Store references to current DOM elements
+    const subtitleElement = subtitleRef.current;
+    const titleElement = titleRef.current;
+    const contentElement = contentRef.current;
+    const secondContentElement = secondContentRef.current;
+
     // Observe elements for animation
-    if (subtitleRef.current) observer.observe(subtitleRef.current);
-    if (titleRef.current) observer.observe(titleRef.current);
-    if (contentRef.current) observer.observe(contentRef.current);
-    if (imageRef.current) observer.observe(imageRef.current);
+    if (subtitleElement) observer.observe(subtitleElement);
+    if (titleElement) observer.observe(titleElement);
+    if (contentElement) observer.observe(contentElement);
+    if (secondContentElement) observer.observe(secondContentElement);
 
     return () => {
-      if (subtitleRef.current) observer.unobserve(subtitleRef.current);
-      if (titleRef.current) observer.unobserve(titleRef.current);
-      if (contentRef.current) observer.unobserve(contentRef.current);
-      if (imageRef.current) observer.unobserve(imageRef.current);
+      // Use stored references in cleanup
+      if (subtitleElement) observer.unobserve(subtitleElement);
+      if (titleElement) observer.unobserve(titleElement);
+      if (contentElement) observer.unobserve(contentElement);
+      if (secondContentElement) observer.unobserve(secondContentElement);
     };
   }, []);
 
@@ -50,7 +57,7 @@ const VisionSection = () => {
           
           <div className="vision-description animate-element" ref={contentRef}>
             <p>
-            ✅ Step 1: Click “Get Started”
+            ✅ Step 1: Click "Get Started"
 Start your journey by signing up using your email or Metamask wallet — no friction, just options.
 <br/>
 <br/>
@@ -58,8 +65,8 @@ Start your journey by signing up using your email or Metamask wallet — no fric
 Once you're in, complete a quick KYB (Know Your Business) to get verified.
 <br/><br/>
 ✅ Step 3: Get Your GLL ID (On-Chain)
-You’re issued a unique, globally verifiable GLL ID, secured on the XDC Blockchain — this becomes your passport for global trade.
-<br/><br/>
+You're issued a unique, globally verifiable GLL ID, secured on the XDC Blockchain — this becomes your passport for global trade.
+            <br/><br/>
 ✅ Step 4: Explore Your Dashboard
 Now, you unlock your personalized MSME dashboard with access to the entire GLL ecosystem:
 <br/><br/>
@@ -79,19 +86,13 @@ Now, you unlock your personalized MSME dashboard with access to the entire GLL e
           </div>
         </div>
         
-        <div className="vision-image-container animate-element" ref={imageRef}>
-          <div className="vision-image-wrapper">
-            <img 
-              src={visionImage} 
-              alt="Person using smartphone" 
-              className="vision-image" 
-            />
+        <div className="vision-content second-vision-content animate-element" ref={secondContentRef}>
+          <div className="vision-description">
           </div>
-          <div className="image-decoration"></div>
         </div>
       </div>
     </section>
   );
 };
 
-export default VisionSection; 
+export default VisionSection;
