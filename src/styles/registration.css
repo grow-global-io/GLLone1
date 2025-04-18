@@ -423,7 +423,7 @@ body, html {
 /* Points Counter */
 .points-counter {
   position: fixed;
-  bottom: 20px;
+  bottom: 420px;
   right: 20px;
   background-color: white;
   padding: 15px 20px;

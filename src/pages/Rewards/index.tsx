@@ -13,6 +13,7 @@ import Card6 from './components/Card6';
 import Card7 from './components/Card7';
 import Card8 from './components/Card8';
 import Card9 from './components/Card9';
+import MyBalanceQuick from '../../components/registration/MyBalanceQuick';
 
 interface RewardCard {
   title: string;
@@ -126,6 +127,7 @@ const RewardsPage: React.FC = () => {
 
   return (
     <div className="dashboard-container">
+      <MyBalanceQuick points={10} />
       {/* <div className="header">
         <img src="https://i.ibb.co/LhgVnSVq/Image-13-4-2025-at-12-33.jpg" alt="GLL Logo" className="logo" />
         <div className="dropdown-container">
