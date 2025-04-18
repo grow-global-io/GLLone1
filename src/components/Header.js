@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import LogoMain from '../assets/Secondary.png'
+import { ConnectButton } from '@rainbow-me/rainbowkit'  
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className="cta-button">
-            <button>JOIN OUR COMMUNITY</button>
+            <ConnectButton label="Login" showBalance={false} />
           </div>
         </div>
       </div>
