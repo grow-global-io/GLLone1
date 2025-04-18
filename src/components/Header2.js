@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header2.css';
+import logo from '../assets/3886047.jpg';
 
 const Header2 = () => {
   // Countdown timer state

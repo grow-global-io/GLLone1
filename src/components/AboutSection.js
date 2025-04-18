@@ -11,20 +11,28 @@ const AboutSection = forwardRef((props, ref) => {
           <h2 className="section-title">How we got started</h2>
           
           <p className="story-paragraph">
-            Mode Mobile (originally Current Rewards) was founded in 2017 as 
-            a cross-platform music aggregation service — bringing content 
-            from dozens of platforms into a single, centralized app.
+          🌱 Our Story: From Hackathon Dream to Global MSME Platform
+GLL (GrowLimitless) began as a hackathon-winning idea at the Global Hackerearth 2022, originally envisioned as the “PayPal of Crypto” for South East Asia — a seamless bridge between digital assets and real-world businesses.
+
           </p>
           
           <p className="story-paragraph">
-            As we grew, we asked ourselves, "instead of just offering free 
-            music, is it possible to <span className="highlighted-text">solve the root problem and provide 
-            people with easy ways to earn more income</span>?"
+          As we evolved, we saw a deeper challenge — millions of MSMEs across India and South East Asia lacked access to global visibility, capital, and growth tools. <span className="highlighted-text">That insight became our turning point.
+          </span>?"
           </p>
           
           <p className="story-paragraph">
-            It was that central question that led us to the creation of the
-            <span className="highlighted-text"> Mode EarnPhone — the first smartphone that pays for itself</span>.
+          Today, GLL is building the first all-in-one MSME growth ecosystem powered by blockchain identity, AI agents, and a gamified rewards system — helping business owners go from local to limitless.<br/>
+
+            <span className="highlighted-text"> <br/> 🏆 Winner at the XDC Finternet Accelerator Program <br/>
+🚀 Cohorted by T-Hub, Hyderabad <br/>
+🤝 Backed by XDC Singapore with our first term sheet signed
+<p className="story-paragraph">
+<br/>Our mission is simple:
+<span className="highlighted-text">Empower 10M+ MSMEs to grow globally, verify digitally, and earn endlessly.
+          </span>"
+          </p>
+</span>
           </p>
         </div>
         
@@ -32,7 +40,8 @@ const AboutSection = forwardRef((props, ref) => {
           <div className="image-container">
             <img src={foundersImage} alt="Mode Mobile founder" />
             <div className="image-caption">
-              I am No one 
+              Anirban Roy, CEO, <br/>
+              Tathagat Saha, CTO
             </div>
           </div>
         </div>

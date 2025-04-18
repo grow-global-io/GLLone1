@@ -1,29 +1,32 @@
 import React from 'react';
 import './Landing.css';
 import busStopImage from '../assets/mode.jpeg'; // Using an existing image as placeholder
-
+import landingVideo from '../assets/video.mp4';
 const Landing = () => {
   return (
     <section className="landing">
       <div className="landing-content">
         <h1 className="landing-title">
-          Turning the Smartphone
+        Earn Rewards by 
           <br />
-          into the <span className="">EarnPhone</span>
+          Running Business <span className="">on Your Phone. </span>
         </h1>
         
         <p className="landing-subtitle">
-          We're revolutionizing the smartphone industry with the world's 
-          first <span className="highlight">EarnPhone</span> — powered by Mode's proprietary <span className="highlight">EarnOS</span>.
+        We’re transforming how MSMEs can grow global — rewarding South East Asian business owners for everyday actions like uploading<span className="highlight">invoices, sharing products, and connecting networks </span> — all through one app <span className="highlight">Powered by GLL Ions</span>.
         </p>
       </div>
       
       <div className="landing-image-container">
         <div className="landing-image-wrapper">
-          <img 
-            src={busStopImage} 
-            alt="EarnPhone advertisement at bus stop" 
+        <video 
+            src={landingVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="landing-image"
+            alt="EarnPhone promotional video"
           />
           <div className="image-overlay"></div>
         </div>

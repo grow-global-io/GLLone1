@@ -1,0 +1,175 @@
+.app-showcase {
+  background-color: #0a0a0f;
+  color: white;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app-showcase-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.app-showcase-text {
+  width: 50%;
+  padding-right: 2rem;
+}
+
+.app-showcase-product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-label {
+  color: #ff3e8f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align: left;
+}
+
+.product-description, .product-benefits {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.learn-more-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+.learn-more-btn:hover {
+  background-color: #ff5252;
+}
+
+.app-showcase-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 20px; */
+}
+
+.phone-image {
+  max-width: 90%;
+  height: auto;
+  transform: rotate(0deg);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  border-radius: 20px;
+}
+
+.gradient-circle {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff3e8f 0%, #6a11cb 100%);
+  filter: blur(25px);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .product-title {
+    font-size: 2.2rem;
+  }
+  
+  .product-description, .product-benefits {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-showcase-content {
+    flex-direction: column-reverse;
+  }
+  
+  .app-showcase-text, .app-showcase-image {
+    width: 100%;
+    padding-right: 0;
+  }
+  
+  .app-showcase-text {
+    margin-top: 2rem;
+  }
+  
+  .app-showcase-product {
+    align-items: center;
+  }
+  
+  .product-label, .product-title, .product-description, .product-benefits {
+    text-align: center;
+  }
+  
+  .learn-more-btn {
+    align-self: center;
+  }
+  
+  .phone-image {
+    max-width: 80%;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-showcase {
+    padding: 3rem 1.5rem;
+  }
+  
+  .product-title {
+    font-size: 1.8rem;
+  }
+  
+  .product-description, .product-benefits {
+    font-size: 0.9rem;
+  }
+  
+  .learn-more-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .gradient-circle {
+    width: 80px;
+    height: 80px;
+  }
+}

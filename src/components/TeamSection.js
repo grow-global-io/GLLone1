@@ -82,8 +82,8 @@ const TeamSection = () => {
         <h2 className="section-title">Our Global Team</h2>
         
         <p className="team-description">
-          Our team works remotely around the world 🌎, with members in the U.S., 
-          Mexico, Argentina, Brazil, Poland, India, and more.
+          Our team works remotely around the world 🌎, with members in the ESTONIA, 
+          INDIA, and more.
         </p>
       </div>
       

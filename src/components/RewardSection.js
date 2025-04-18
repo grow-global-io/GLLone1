@@ -1,5 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import './RewardSection.css';
+import Image1 from '../assets/Rewards/form1.jpg';
+import Image2 from '../assets/Rewards/form2.jpg';
+import Image3 from '../assets/Rewards/form3.jpg';
+import Image4 from '../assets/Rewards/form4.jpg';
+import Image5 from '../assets/Rewards/form5.jpg';
+import Image6 from '../assets/Rewards/form6.jpg';
+import Image7 from '../assets/Rewards/form7.jpg';
+import Image8 from '../assets/Rewards/form8.jpg';
+import Image9 from '../assets/Rewards/form9.jpg';
+// import Image10 from '../assets/Rewards/form10.jpg';
 
 const RewardSection = () => {
   const sectionRef = useRef(null);
@@ -7,48 +17,48 @@ const RewardSection = () => {
   const rewardItems = [
     {
       id: 1,
-      title: 'Listening to Music',
-      imageUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Registering And Verifying Their Business ',
+      imageUrl: Image1
     },
     {
       id: 2,
-      title: 'Playing Games',
-      imageUrl: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Uploading Products',
+      imageUrl: Image2
     },
     {
       id: 3,
-      title: 'Tracking Fitness',
-      imageUrl: 'https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Submitting Unpaid Invoices',
+      imageUrl: Image3
     },
     {
       id: 4,
-      title: 'Charging Phone',
-      imageUrl: 'https://images.unsplash.com/photo-1592890288564-76628a30a657?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Connecting Company Socials',
+      imageUrl: Image4
     },
     {
       id: 5,
-      title: 'Shopping',
-      imageUrl: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Posting Business Stories',
+      imageUrl: Image5
     },
     {
       id: 6,
-      title: 'Surfing the Web',
-      imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Referring A Friend',
+      imageUrl: Image6
     },
     {
       id: 7,
-      title: 'Reading the News',
-      imageUrl: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Reading the Blogs',
+      imageUrl: Image7
     },
     {
       id: 8,
       title: 'Completing Tasks',
-      imageUrl: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      imageUrl: Image8
     },
     {
       id: 9,
-      title: 'Watching Videos',
-      imageUrl: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'
+      title: 'Uploading Financials',
+      imageUrl: Image9
     },
     {
       id: 10,
@@ -85,7 +95,7 @@ const RewardSection = () => {
     <section className="reward-section" ref={sectionRef}>
       <div className="reward-container">
         <h3 className="reward-subtitle">WE PAY OUR USERS</h3>
-        <h2 className="reward-title">Mode Mobile Users are<br />Rewarded For:</h2>
+        <h2 className="reward-title">Business Owners/App Users are <br />rewarded with GLL Ions For :</h2>
         
         <div className="reward-grid">
           {rewardItems.map((item, index) => (

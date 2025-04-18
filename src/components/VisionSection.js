@@ -43,21 +43,38 @@ const VisionSection = () => {
           <h3 className="vision-subtitle animate-element" ref={subtitleRef}>OUR VISION</h3>
           
           <h2 className="vision-title animate-element" ref={titleRef}>
-            Wealth-building<br />
-            opportunities for all
+          How You Get Started 
+          <br />
+          with GLL.one
           </h2>
           
           <div className="vision-description animate-element" ref={contentRef}>
             <p>
-              On average, people spend 25% of their waking 
-              hours on devices — generating huge profits for 
-              tech companies worldwide.
+            ✅ Step 1: Click “Get Started”
+Start your journey by signing up using your email or Metamask wallet — no friction, just options.
+<br/>
+<br/>
+✅ Step 2: Set Up Your Business Profile
+Once you're in, complete a quick KYB (Know Your Business) to get verified.
+<br/><br/>
+✅ Step 3: Get Your GLL ID (On-Chain)
+You’re issued a unique, globally verifiable GLL ID, secured on the XDC Blockchain — this becomes your passport for global trade.
+<br/><br/>
+✅ Step 4: Explore Your Dashboard
+Now, you unlock your personalized MSME dashboard with access to the entire GLL ecosystem:
+<br/><br/>
+🧠 AI Agents for finance, growth, and operational advice
+<br/><br/>
+🤝 Business Matchmaking to connect with global B2B partners
+<br/><br/>
+💳 Fintech Gateway to access working capital & digital asset payments
+<br/><br/>
+🧾 Smart tools like e-signing, invoice creation, and AR product experiences
+<br/><br/>
             </p>
-            
             <p>
-              At Mode, we believe users deserve a share of 
-              the wealth they help create through their 
-              attention and data.
+            ✅ Step 5: Earn GLL Ions as You Work
+            Every action you take — uploading invoices, adding products, referring others — earns you GLL Ions, our native rewards currency.
             </p>
           </div>
         </div>

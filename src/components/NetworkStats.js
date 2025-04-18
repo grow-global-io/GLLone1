@@ -6,29 +6,29 @@ const NetworkStats = () => {
     <section className="network-stats">
       <div className="stats-container">
         <div className="stat-card">
-          <h2 className="stat-number">$325M+</h2>
+          <h2 className="stat-number">~40M+</h2>
           <p className="stat-description">
-            earned and saved by
+          All digital creators
             <br />
-            our users
+            & entrepreneurs
           </p>
         </div>
         
         <div className="stat-card">
-          <h2 className="stat-number">2M+</h2>
+          <h2 className="stat-number">~12M-15M</h2>
           <p className="stat-description">
-            5-star reviews in the
+          Addressable users in
             <br />
-            <a href="https://play.google.com/store" className="stat-link">Google Play Store</a>
+            <a href="" className="stat-link">6 Target Countries</a>
           </p>
         </div>
         
         <div className="stat-card">
-          <h2 className="stat-number">$40M</h2>
+          <h2 className="stat-number">~50k-1M</h2>
           <p className="stat-description">
-            from investors
+          Realistic user acquisition
             <br />
-            around the world
+            in 1-2 years
           </p>
         </div>
       </div>

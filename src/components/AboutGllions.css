@@ -1,0 +1,130 @@
+.about-gllions {
+  background-color: #0a0a0f;
+  color: white;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-gllions-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-showcase {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.about-gllions-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 2rem;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .about-gllions-content {
+    flex-direction: column;
+  }
+  
+  .phone-showcase, .about-gllions-text {
+    width: 100%;
+  }
+  
+  .phone-showcase {
+    margin-bottom: 2rem;
+  }
+  
+  .about-gllions-text {
+    padding: 0;
+  }
+}
+
+.phone-screenshot {
+  max-width: 40%;
+  height: auto;
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.about-gllions-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.gllions-label {
+  color: #ff3e8f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.gllions-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.gllions-description, .gllions-stats {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.gradient-circle {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff3e8f 0%, #6a11cb 100%);
+  filter: blur(30px);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .gllions-title {
+    font-size: 2.5rem;
+  }
+  
+  .phone-screenshot {
+    max-width: 60%;
+    transform: none;
+  }
+}

@@ -202,6 +202,13 @@
     transform: translateY(0);
   }
   
+  /* Hide logo when mobile menu is open */
+  .nav-container.open + .container .logo {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
   .nav ul {
     flex-direction: column;
     align-items: center;
@@ -249,4 +256,4 @@
     padding: 8px 12px;
     font-size: 0.7rem;
   }
-} 
+}

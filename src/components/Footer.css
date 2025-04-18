@@ -20,6 +20,7 @@
   max-width: 500px;
 }
 
+
 .product-label {
   display: block;
   font-size: 14px;
@@ -48,7 +49,7 @@
 }
 
 .product-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 81, 0, 0.3);
 }
 
 .product-description {
@@ -280,4 +281,182 @@
   .footer-wave {
     height: 60px;
   }
-} 
+}
+
+/* Update the product-info section styling */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.product-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff3e8f;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.product-button {
+  background-color: #ff3e8f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.product-button:hover {
+  background-color: #e62e7f;
+}
+
+/* Make sure the container has proper flex layout */
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+  }
+  
+  .product-info, .product-description {
+    width: 100%;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+  }
+}
+
+/* Add this to the end of your CSS file */
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: linear-gradient(120deg, #8E74F3 0%, #EC4899 100%);
+  transform: translateY(-3px);
+}
+
+/* Improved responsive styles for footer */
+@media (max-width: 992px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-branding {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .footer-links-column {
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 60px 20px 100px;
+  }
+  
+  .footer-container {
+    padding: 0 20px;
+  }
+  
+  .footer-links-container {
+    gap: 20px;
+  }
+  
+  .footer-cta {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-links-column {
+    min-width: 100%;
+  }
+  
+  .footer-column-title {
+    margin-bottom: 15px;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    gap: 10px;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .footer-wave {
+    height: 50px;
+  }
+  
+  .footer-content {
+    padding: 30px 0 20px;
+  }
+  
+  .footer-divider {
+    margin-bottom: 20px;
+  }
+}

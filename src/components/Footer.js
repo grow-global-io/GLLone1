@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+// Import icons from react-icons
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,17 +10,14 @@ const Footer = () => {
       <section className="product-section">
         <div className="product-container">
           <div className="product-info">
-            <span className="product-label">MODE EARNPHONE</span>
+            <span className="product-label">GLL IONS</span>
             <h2 className="product-title">Learn more about<br />our products</h2>
-            <button className="product-button">MODE EARNPHONE</button>
+            <button className="product-button">GET STARTED HERE</button>
           </div>
           
           <div className="product-description">
             <p>
-              The Mode EarnPhone is not rent-to-own. As long as you
-              maintain your subscription you can keep earning up to
-              $1,200 or more every year with your Mode Earn Phone.
-              Receive a new device after 12 months.
+            GLL ions opens business owners access to SaaS subscription based digital tools like e-signing suite, AI agents for finance and even authenticity certificates that are globally verifiable.
             </p>
           </div>
         </div>
@@ -33,8 +32,8 @@ const Footer = () => {
             <div className="footer-top">
               <div className="footer-branding">
                 <div className="footer-logo">
-                  <span className="logo-text">m<span className="logo-o">o</span>de</span>
-                  <span className="logo-sub">mobile</span>
+                  <span className="logo-text">G<span className="logo-o">L</span>L</span>
+                  <span className="logo-sub">Ions</span>
                 </div>
                 
                 <p className="footer-tagline">
@@ -43,8 +42,27 @@ const Footer = () => {
                 </p>
                 
                 <button className="footer-cta">
-                  INVESTMENT OPPORTUNITY
+                  JOIN OUR COMMUNITY
                 </button>
+                
+                {/* Social Media Icons */}
+                <div className="social-icons">
+                  <a href="https://www.facebook.com/growglobalstrategies" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaFacebook />
+                  </a>
+                  <a href="https://twitter.com/gll_app/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaTwitter />
+                  </a>
+                  <a href="t.me/GLL_Community" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaTelegram />
+                  </a>
+                  <a href="https://www.linkedin.com/company/growglobalstrategies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://chat.whatsapp.com/CroHENW5LkEGBZ9uf2Ge2s" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaWhatsapp />
+                  </a>
+                </div>
               </div>
               
               <div className="footer-links-container">
@@ -60,8 +78,8 @@ const Footer = () => {
                 <div className="footer-links-column">
                   <h3 className="footer-column-title">EXTERNAL</h3>
                   <ul className="footer-links">
-                    <li><a href="#earnphone">Mode EarnPhone</a></li>
-                    <li><a href="#earnapp">Mode Earn App</a></li>
+                    <li><a href="#earnphone">JOIN OUR COMMUNITY</a></li>
+                    <li><a href="#earnapp">GrowLimitless.app</a></li>
                   </ul>
                 </div>
                 
@@ -79,7 +97,7 @@ const Footer = () => {
             <div className="footer-divider"></div>
             
             <div className="footer-bottom">
-              <p className="footer-copyright">© 2023 Mode Mobile. All rights reserved.</p>
+              <p className="footer-copyright">© 2025 Grow Global. All rights reserved.</p>
             </div>
           </div>
         </div>
@@ -88,4 +106,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
