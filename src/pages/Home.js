@@ -22,7 +22,7 @@ const Home = () => {
       {/* <TeamSection /> */} 
       <ValuesSection />
       <VisionSection />
-      <GuidingPrinciples />
+      {/* <GuidingPrinciples /> */}
     </div>
   );
 };
