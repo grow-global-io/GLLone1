@@ -13,7 +13,7 @@ const ValuesSection = () => {
   const subtitleRef = useRef(null);
   const titleRef = useRef(null);
   const contentRef = useRef(null);
-  const imageRef = useRef(null);
+  const imageRef = useRef(null); // Only for ONE icon outside map
 
   useEffect(() => {
     const subtitleEl = subtitleRef.current;
@@ -21,17 +21,16 @@ const ValuesSection = () => {
     const contentEl = contentRef.current;
     const imageEl = imageRef.current;
 
-    // Example animation classes or manipulations
-    subtitleEl?.classList.add('fade-in');
-    titleEl?.classList.add('slide-in');
-    contentEl?.classList.add('reveal');
-    imageEl?.classList.add('float-in');
+    if (subtitleEl) subtitleEl.classList.add('fade-in');
+    if (titleEl) titleEl.classList.add('slide-in');
+    if (contentEl) contentEl.classList.add('reveal');
+    if (imageEl) imageEl.classList.add('float-in');
 
     return () => {
-      subtitleEl?.classList.remove('fade-in');
-      titleEl?.classList.remove('slide-in');
-      contentEl?.classList.remove('reveal');
-      imageEl?.classList.remove('float-in');
+      if (subtitleEl) subtitleEl.classList.remove('fade-in');
+      if (titleEl) titleEl.classList.remove('slide-in');
+      if (contentEl) contentEl.classList.remove('reveal');
+      if (imageEl) imageEl.classList.remove('float-in');
     };
   }, []);
 
@@ -120,14 +119,17 @@ const ValuesSection = () => {
         <br /><br />
 
         <div className="values-grid">
-          {values.map((value) => (
+          {values.map((value, index) => (
             <div className="value-card" key={value.id}>
-              <div className="value-icon" ref={imageRef}>{value.icon}</div>
+              {/* Only attach imageRef to the first icon, rest are fine without it */}
+              <div className="value-icon" ref={index === 0 ? imageRef : null}>
+                {value.icon}
+              </div>
               <h3 className="value-title">{value.title}</h3>
               <p className="value-subtitle">{value.subtitle}</p>
               <ul className="value-points">
-                {value.points.map((point, index) => (
-                  <li key={index}>
+                {value.points.map((point, i) => (
+                  <li key={i}>
                     <span className="bullet">•</span>
                     <span className="point-text">{point}</span>
                   </li>
