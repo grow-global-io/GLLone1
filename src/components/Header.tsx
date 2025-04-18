@@ -45,6 +45,7 @@ const Header = () => {
               <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
               <li><Link to="https://gll.gitbook.io/growlimitless-whitepaper-gll" onClick={() => setMenuOpen(false)}>WhitePaper</Link></li>
               <li><Link to="/team" onClick={() => setMenuOpen(false)}>Team</Link></li>
+              <li><Link to="/rewards" onClick={() => setMenuOpen(false)}>Rewards</Link></li>
               <li><Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link></li>
               {/* <li><Link to="https://partners.gll.one" onClick={() => setMenuOpen(false)}>Register</Link></li> */}
               {/* <li><Link to="/acquisitions" onClick={() => setMenuOpen(false)}>Acquisitions</Link></li> */}

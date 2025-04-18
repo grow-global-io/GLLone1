@@ -15,6 +15,19 @@ import { connectors } from "./wallet";
 import { darkTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import Register from './pages/Register';
 
+// Import Rewards pages
+import { GllProvider } from './pages/Rewards/GLLContext';
+import RewardsPage from './pages/Rewards';
+import Card1 from './pages/Rewards/components/Card1';
+import Card2 from './pages/Rewards/components/Card2';
+import Card3 from './pages/Rewards/components/Card3';
+import Card4 from './pages/Rewards/components/Card4';
+import Card5 from './pages/Rewards/components/Card5';
+import Card6 from './pages/Rewards/components/Card6';
+import Card7 from './pages/Rewards/components/Card7';
+import Card8 from './pages/Rewards/components/Card8';
+import Card9 from './pages/Rewards/components/Card9';
+
 // Define prop types for MainLayout
 interface MainLayoutProps {
   children: ReactNode;
@@ -64,17 +77,32 @@ function App() {
           appName: "GrowLimitless",
           disclaimer: Disclaimer,
         }}>
-          <Router>
-            <div className="App">
-              <Routes>
-                <Route path="/invest" element={<Investment />} />
-                <Route path="/" element={<MainLayout><Home /></MainLayout>} />
-                <Route path="/team" element={<MainLayout><Team /></MainLayout>} />
-                <Route path="/register" element={<MainLayout><Register /></MainLayout>} />
-                {/* Add more routes with MainLayout as needed */}
-              </Routes>
-            </div>
-          </Router>
+          <GllProvider>
+            <Router>
+              <div className="App">
+                <Routes>
+                  <Route path="/invest" element={<Investment />} />
+                  <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+                  <Route path="/team" element={<MainLayout><Team /></MainLayout>} />
+                  <Route path="/register" element={<MainLayout><Register /></MainLayout>} />
+                  
+                  {/* Rewards routes */}
+                  <Route path="/rewards" element={<MainLayout><RewardsPage /></MainLayout>} />
+                  <Route path="/rewards/card1" element={<MainLayout><Card1 /></MainLayout>} />
+                  <Route path="/rewards/card2" element={<MainLayout><Card2 /></MainLayout>} />
+                  <Route path="/rewards/card3" element={<MainLayout><Card3 /></MainLayout>} />
+                  <Route path="/rewards/card4" element={<MainLayout><Card4 /></MainLayout>} />
+                  <Route path="/rewards/card5" element={<MainLayout><Card5 /></MainLayout>} />
+                  <Route path="/rewards/card6" element={<MainLayout><Card6 /></MainLayout>} />
+                  <Route path="/rewards/card7" element={<MainLayout><Card7 /></MainLayout>} />
+                  <Route path="/rewards/card8" element={<MainLayout><Card8 /></MainLayout>} />
+                  <Route path="/rewards/card9" element={<MainLayout><Card9 /></MainLayout>} />
+                  
+                  {/* Add more routes with MainLayout as needed */}
+                </Routes>
+              </div>
+            </Router>
+          </GllProvider>
       </RainbowKitProvider>
     </WagmiConfig>
   );
