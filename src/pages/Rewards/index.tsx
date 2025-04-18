@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGll } from "./GLLContext";
 import './index.css';
-
+import {getAuthProvider} from "../../arcanaAuth";
+import { useAccount, useNetwork } from 'wagmi'
 // Import all card components
 import Card1 from './components/Card1';
 import Card2 from './components/Card2';
@@ -14,6 +15,7 @@ import Card7 from './components/Card7';
 import Card8 from './components/Card8';
 import Card9 from './components/Card9';
 import MyBalanceQuick from '../../components/registration/MyBalanceQuick';
+import toast,{ Toaster } from 'react-hot-toast';
 
 interface RewardCard {
   title: string;
@@ -92,12 +94,29 @@ const rewardCards: RewardCard[] = [
 const RewardsPage: React.FC = () => {
   const navigate = useNavigate();
   const { gllBalance, setGllBalance } = useGll();
-
+  const { address } = useAccount()
   const [selectedTask, setSelectedTask] = useState<RewardCard | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   const [loginInput, setLoginInput] = useState<{ username: string; password: string }>({ username: '', password: '' });
   const [fadeIn, setFadeIn] = useState<boolean>(false);
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
+
+  useEffect(() => {
+    async function  checkUser(){
+      try{
+        const auth = getAuthProvider()
+        const userInfo = await auth.getUser();
+        toast.success(`Welcome ${userInfo?.email} !!`)
+      }catch(error){
+        toast.error(`Please Login `) 
+        navigate('/') 
+      }
+
+    }
+    checkUser()
+    }, [address])
+
+  
 
   useEffect(() => {
     setTimeout(() => setFadeIn(true), 300);
@@ -127,6 +146,7 @@ const RewardsPage: React.FC = () => {
 
   return (
     <div className="dashboard-container">
+      
       <MyBalanceQuick points={10} />
       {/* <div className="header">
         <img src="https://i.ibb.co/LhgVnSVq/Image-13-4-2025-at-12-33.jpg" alt="GLL Logo" className="logo" />
