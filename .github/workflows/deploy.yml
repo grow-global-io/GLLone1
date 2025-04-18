@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 18
           
+          
       - name: 🔄 Rename .env.sample to .env
         run: mv .env.sample .env
 
