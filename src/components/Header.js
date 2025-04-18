@@ -38,7 +38,7 @@ const Header = () => {
               <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
               <li><Link to="/team" onClick={() => setMenuOpen(false)}>Team</Link></li>
               <li><Link to="/careers" onClick={() => setMenuOpen(false)}>Careers</Link></li>
-              <li><Link to="/acquisitions" onClick={() => setMenuOpen(false)}>Acquisitions</Link></li>
+              <li><Link to="/acquisitions" onClick={() => setMenuOpen(false)}>Acquisition</Link></li>
             </ul>
           </nav>
           <div className="cta-button">

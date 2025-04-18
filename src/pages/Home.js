@@ -1,14 +1,15 @@
 import React from 'react';
 import Landing from '../components/Landing';
 import NetworkStats from '../components/NetworkStats';
-import AboutSection from '../components/AboutSection';
 import RewardSection from '../components/RewardSection';
-import TeamSection from '../components/TeamSection';
 import ValuesSection from '../components/ValuesSection';
+// <<<<<<< HEAD
 import VisionSection from '../components/VisionSection';
 import GuidingPrinciples from '../components/GuidingPrinciples';
 import AppShowcase from '../components/AppShowcase';
 import AboutGllions from '../components/AboutGllions';
+// =======
+// >>>>>>> c6de251b320d69e0fe039178ed9d44fda7869f44
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
       {/* <TeamSection /> */} 
       <ValuesSection />
       <VisionSection />
-      <GuidingPrinciples />
+      {/* <GuidingPrinciples /> */}
     </div>
   );
 };
