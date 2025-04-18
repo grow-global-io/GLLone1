@@ -268,9 +268,9 @@ const Step2: React.FC<Step2Props> = ({ formData, onNext, onBack }) => {
                     <h1 className="fs-2 fs-md-1 mb-4">Your Business Deserves a Bigger Stage!</h1>
                     <p className="mb-4">We understand your business is unique, and so are your needs.</p>
                     <ul className="mb-4 ps-3 ps-md-4">
-                        <li className="mb-2">Tell us who you are—whether you&apos;re a Trader or an OEM.</li>
-                        <li className="mb-2">Get featured in an ecosystem designed for growth</li>
-                        <li className="mb-2">No inventory? No problem. Sell smarter with Anti Mascot</li>
+                        <li className="form-check-label1">Tell us who you are—whether you&apos;re a Trader or an OEM.</li>
+                        <li className="form-check-label1">Get featured in an ecosystem designed for growth</li>
+                        <li className="form-check-label1">No inventory? No problem. Sell smarter with Anti Mascot</li>
                     </ul>
                     <blockquote className="border-start ps-3 border-4">Your success is our mission</blockquote>
                 </div>

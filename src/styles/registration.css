@@ -156,6 +156,14 @@ body, html {
   padding-left: 1.5rem;
   color: rgb(112, 112, 112);
 }
+.form-check-label {
+  color: #6c757d;
+} 
+
+.form-check-label1 {
+  color: #ffffff;
+} 
+
 
 .form-check-input {
   /* color: #ffffff; */

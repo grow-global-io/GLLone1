@@ -85,10 +85,10 @@ const Step1: React.FC<Step1Props> = ({ formData, onNext }) => {
                         Whether you&apos;re an emerging trader or a seasoned manufacturer, your next big opportunity starts here.
                     </p>
                     <ul className="mb-4 ps-3 ps-md-4">
-                        <li className="mb-2">Share your details and gain access to a global marketplace</li>
-                        <li className="mb-2">Connect with high-value buyers and sellers instantly</li>
-                        <li className="mb-2">Step into a world where businesses grow beyond borders</li>
-                        <li className="mb-2">Share your details to gain Rewards</li>
+                        <li className="form-check-label1">Share your details and gain access to a global marketplace</li>
+                        <li className="form-check-label1">Connect with high-value buyers and sellers instantly</li>
+                        <li className="form-check-label1">Step into a world where businesses grow beyond borders</li>
+                        <li className="form-check-label1">Share your details to gain Rewards</li>
                     </ul>
                     <blockquote className="blockquote border-start ps-3 border-4">
                         &quot;Your success is our mission&quot;
