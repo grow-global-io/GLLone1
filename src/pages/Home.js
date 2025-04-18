@@ -7,6 +7,8 @@ import TeamSection from '../components/TeamSection';
 import ValuesSection from '../components/ValuesSection';
 import VisionSection from '../components/VisionSection';
 import GuidingPrinciples from '../components/GuidingPrinciples';
+import AppShowcase from '../components/AppShowcase';
+import AboutGllions from '../components/AboutGllions';
 
 const Home = () => {
   return (
@@ -14,11 +16,13 @@ const Home = () => {
       <Landing />
       <NetworkStats />
       {/* <AboutSection /> */}
+      <AppShowcase />
       <RewardSection />
-      {/* <TeamSection /> */}
+      <AboutGllions />
+      {/* <TeamSection /> */} 
       <ValuesSection />
-      {/* <VisionSection /> */}
-      {/* <GuidingPrinciples /> */}
+      <VisionSection />
+      <GuidingPrinciples />
     </div>
   );
 };
