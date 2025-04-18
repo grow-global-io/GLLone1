@@ -1,11 +1,25 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Landing.css';
-
 import landingVideo from '../assets/video1.mp4';
+
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
+    // Ensure video plays on load
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log('Auto-play was prevented:', error);
+        setIsPlaying(false);
+        // Add a user interaction listener to play video
+        document.addEventListener('click', () => {
+          videoRef.current?.play();
+          setIsPlaying(true);
+        }, { once: true });
+      });
+    }
+
     const handleScroll = () => {
       if (videoRef.current) {
         // Get the position of the video element
@@ -35,6 +49,17 @@ const Landing = () => {
     };
   }, []);
 
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section className="landing">
       <div className="landing-content">
@@ -51,16 +76,23 @@ const Landing = () => {
       
       <div className="landing-image-container">
         <div className="landing-image-wrapper">
-        <video 
+          <video 
             ref={videoRef}
             src={landingVideo}
             autoPlay
             loop
-            muted
             playsInline
             className="landing-image"
+            // muted={true}
           />
           <div className="image-overlay"></div>
+          <button 
+            className="video-control-btn" 
+            onClick={togglePlayPause}
+            aria-label={isPlaying ? "Pause video" : "Play video"}
+          >
+            {isPlaying ? "❚❚" : "▶"}
+          </button>
         </div>
       </div>
       
