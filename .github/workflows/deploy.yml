@@ -20,7 +20,7 @@ jobs:
 
       - name: Running Install Commands
         run: |
-          npm install
+          npm install --force
 
       - name: Running Build Commands
         run: |
