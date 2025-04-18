@@ -30,12 +30,13 @@ const ValuesSection = () => {
 
     // Cleanup
     return () => {
+      // Use the stored variables instead of accessing .current again
       subtitleEl?.classList.remove('fade-in');
       titleEl?.classList.remove('slide-in');
       contentEl?.classList.remove('reveal');
       imageEl?.classList.remove('float-in');
     };
-  }, []); // ✅ safe to leave as [] — refs don’t go in dependency array
+  }, []); // ✅ safe to leave as [] — refs don't go in dependency array
 
   const values = [
     {

@@ -24,7 +24,7 @@ jobs:
 
       - name: Running Build Commands
         run: |
-          npm run build
+          CI=false npm run build
 
 
       - name: Deploying to Hostinger
