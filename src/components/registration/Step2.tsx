@@ -324,6 +324,7 @@ const Step2: React.FC<Step2Props> = ({ formData, onNext, onBack }) => {
                                 type="text"
                                 name="companyName"
                                 className="form-control"
+                                placeholder='Enter Company Name'
                                 value={form.companyName}
                                 onChange={handleChange}
                             />
@@ -335,6 +336,7 @@ const Step2: React.FC<Step2Props> = ({ formData, onNext, onBack }) => {
                                 type="text"
                                 name="companyAddress"
                                 className="form-control"
+                                placeholder='Enter Company Address'
                                 value={form.companyAddress}
                                 onChange={handleChange}
                             />

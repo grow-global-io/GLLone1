@@ -194,9 +194,9 @@ const Step3: React.FC<Step3Props> = ({ formData, onBack }) => {
                     <h1 className="fs-2 fs-md-1 mb-4">Complete Your Registration</h1>
                     <p className="mb-4">We need your bank details for payment processing.</p>
                     <ul className="mb-4 ps-3 ps-md-4">
-                        <li className="mb-2">Secure and encrypted transmission</li>
-                        <li className="mb-2">Required for payout processing</li>
-                        <li className="mb-2">Your information is protected</li>
+                        <li className="mb-5">Secure and encrypted transmission</li>
+                        <li className="mb-5">Required for payout processing</li>
+                        <li className="mb-5">Your information is protected</li>
                     </ul>
                 </div>
             </div>
