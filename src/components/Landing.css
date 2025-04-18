@@ -189,4 +189,57 @@
   .landing-image-container {
     max-width: 350px;
   }
-} 
+}
+
+
+/* Add these styles to your Landing.css file */
+
+.landing-cta-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.landing-cta-button {
+  background: linear-gradient(120deg, #8E74F3 0%, #EC4899 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.landing-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+.landing-cta-button:active {
+  transform: translateY(-1px);
+}
+
+/* Make the button responsive */
+@media (max-width: 768px) {
+  .landing-cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-cta-container {
+    margin-top: 20px;
+  }
+  
+  .landing-cta-button {
+    padding: 10px 20px;
+    font-size: 13px;
+    width: 80%;
+  }
+}

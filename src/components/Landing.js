@@ -95,6 +95,12 @@ const Landing = () => {
           />
           <div className="image-overlay"></div>
         </div>
+        <br/>
+        <div className="landing-cta-container">
+          <button className="landing-cta-button">
+            JOIN OUR COMMUNITY
+          </button>
+        </div>
       </div>
       
       <div className="background-dots"></div>
