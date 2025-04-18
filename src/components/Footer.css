@@ -103,9 +103,20 @@
 }
 
 .footer-logo {
-  margin-bottom: 25px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-logo-image {
+  width: 140px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-image {
+    width: 80px;
+  }
 }
 
 .logo-text {

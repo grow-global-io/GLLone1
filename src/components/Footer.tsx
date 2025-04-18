@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 // Import icons from react-icons
 import { FaFacebook, FaTwitter, FaLinkedin, FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import secondaryLogo from '../assets/Secondary.png';
 
 const Footer = () => {
   return (
@@ -32,8 +33,7 @@ const Footer = () => {
             <div className="footer-top">
               <div className="footer-branding">
                 <div className="footer-logo">
-                  <span className="logo-text">G<span className="logo-o">L</span>L</span>
-                  <span className="logo-sub">Ions</span>
+                  <img src={secondaryLogo} alt="GLL Logo" className="footer-logo-image" />
                 </div>
                 
                 <p className="footer-tagline">
