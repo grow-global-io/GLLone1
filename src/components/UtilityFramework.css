@@ -1,0 +1,286 @@
+.utility-section {
+  background: linear-gradient(90deg, #310359, #2c0183);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.utility-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.utility-subtitle {
+  color: #ff0090;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.utility-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.utility-title:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+}
+
+.utility-framework {
+  position: relative;
+  min-height: 600px;
+  margin-top: 50px;
+}
+
+.center-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.center-image-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px dashed #8e2de2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.center-image {
+  width: 170px;
+  height: auto;
+}
+
+.center-label {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.utility-item-wrapper {
+  position: absolute;
+  width: 250px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.utility-item-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.utility-item {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.utility-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.utility-item-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.utility-item-description {
+  color: #00ff1e;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.connector-line {
+  position: absolute;
+  background: none;
+  border-top: 2px dashed #c8ff00;
+  z-index: 1;
+}
+
+/* Positioning for each item */
+.left-top {
+  top: 5%;
+  left: 0%;
+}
+
+.right-top {
+  top: 5%;
+  right: 0%;
+}
+
+.left-middle {
+  top: 38%;
+  left: 0%;
+}
+
+.right-middle {
+  top: 40%;
+  right: 0%;
+}
+
+.left-bottom {
+  bottom: 5%;
+  left: 0%;
+}
+
+.right-bottom {
+  bottom: 5%;
+  right: 0%;
+}
+
+.none1{
+    bottom: -5%;
+    right: 40%;
+}
+.none2{
+    bottom: 80%;
+    right: 40%;
+}
+
+/* Connector lines for each position */
+.left-top .connector-line {
+    width: 240px;
+    top: 70%;
+    left: 93%;
+    transform: rotate(34deg);
+}
+
+.right-top .connector-line {
+  width: 240px;
+  top: 80%;
+  right: 93%;
+  transform: rotate(-34deg);
+}
+
+.left-middle .connector-line {
+  width: 180px;
+  top: 50%;
+  left: 100%;
+}
+
+.right-middle .connector-line {
+  width: 180px;
+  top: 50%;
+  right: 100%;
+}
+
+.left-bottom .connector-line {
+  width: 220px;
+  top: 20%;
+  left: 92%;
+  transform: rotate(-35deg);
+}
+
+.right-bottom .connector-line {
+  width: 220px;
+  top: 30%;
+  right: 92%;
+  transform: rotate(35deg);
+}
+
+/* Adding connector lines for none1 and none2 */
+.none1 .connector-line {
+  width: 40px;
+  top: -19%;
+  left: 45%;
+  transform: rotate(-90deg);
+}
+
+.none2 .connector-line {
+  width: 50px;
+  bottom: -25%;
+  left: 45%;
+  transform: rotate(90deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .utility-framework {
+    min-height: 500px;
+  }
+  
+  .left-top, .left-middle, .left-bottom {
+    left: 2%;
+  }
+  
+  .right-top, .right-middle, .right-bottom {
+    right: 2%;
+  }
+}
+
+@media (max-width: 992px) {
+  .utility-framework {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .center-image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 30px 0;
+  }
+  
+  .utility-item-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .connector-line {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .utility-section {
+    padding: 60px 0;
+  }
+  
+  .utility-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
