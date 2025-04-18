@@ -13,26 +13,29 @@ const ValuesSection = () => {
   const subtitleRef = useRef(null);
   const titleRef = useRef(null);
   const contentRef = useRef(null);
-  const imageRef = useRef(null); // Only for ONE icon outside map
+  const imageRef = useRef(null); // Use only once, NOT in .map()
 
   useEffect(() => {
+    // Store current DOM elements to variables
     const subtitleEl = subtitleRef.current;
     const titleEl = titleRef.current;
     const contentEl = contentRef.current;
     const imageEl = imageRef.current;
 
-    if (subtitleEl) subtitleEl.classList.add('fade-in');
-    if (titleEl) titleEl.classList.add('slide-in');
-    if (contentEl) contentEl.classList.add('reveal');
-    if (imageEl) imageEl.classList.add('float-in');
+    // Add animation classes
+    subtitleEl?.classList.add('fade-in');
+    titleEl?.classList.add('slide-in');
+    contentEl?.classList.add('reveal');
+    imageEl?.classList.add('float-in');
 
+    // Cleanup
     return () => {
-      if (subtitleEl) subtitleEl.classList.remove('fade-in');
-      if (titleEl) titleEl.classList.remove('slide-in');
-      if (contentEl) contentEl.classList.remove('reveal');
-      if (imageEl) imageEl.classList.remove('float-in');
+      subtitleEl?.classList.remove('fade-in');
+      titleEl?.classList.remove('slide-in');
+      contentEl?.classList.remove('reveal');
+      imageEl?.classList.remove('float-in');
     };
-  }, []);
+  }, []); // ✅ safe to leave as [] — refs don’t go in dependency array
 
   const values = [
     {
@@ -121,7 +124,6 @@ const ValuesSection = () => {
         <div className="values-grid">
           {values.map((value, index) => (
             <div className="value-card" key={value.id}>
-              {/* Only attach imageRef to the first icon, rest are fine without it */}
               <div className="value-icon" ref={index === 0 ? imageRef : null}>
                 {value.icon}
               </div>
