@@ -19,7 +19,7 @@ const NetworkStats = () => {
           <p className="stat-description">
           Addressable users in
             <br />
-            <a href="" className="stat-link">6 Target Countries</a>
+            <a className="stat-link">6 Target Countries</a>
           </p>
         </div>
         

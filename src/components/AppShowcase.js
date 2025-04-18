@@ -1,6 +1,6 @@
 import React from 'react';
 import './AppShowcase.css';
-import phoneMockup from '../assets/phone_003.png';
+
 import phoneGif from '../assets/GIFs/GLLHome.gif';
 
 const AppShowcase = () => {

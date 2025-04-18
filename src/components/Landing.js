@@ -1,6 +1,6 @@
 import React from 'react';
 import './Landing.css';
-import busStopImage from '../assets/mode.jpeg'; // Using an existing image as placeholder
+
 import landingVideo from '../assets/video.mp4';
 const Landing = () => {
   return (
