@@ -45,7 +45,6 @@
 
 .reward-grid {
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 25px;

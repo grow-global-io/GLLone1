@@ -3,13 +3,15 @@ import TeamSection from '../components/TeamSection';
 import Intro from '../components/Intro';
 import AboutSection from '../components/AboutSection';
 import ValuesSection from '../components/ValuesSection';
+import TeamStars from '../components/TeamStars';
 import './Team.css';
 
 const Team = () => {
   const teamSectionRef = useRef<HTMLDivElement>(null);
+  const teamStarsSectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToTeamSection = () => {
-    teamSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    teamStarsSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -30,6 +32,9 @@ const Team = () => {
           </div>
         </div>
         <AboutSection />
+        <div ref={teamStarsSectionRef}>
+        <TeamStars />
+        </div>
         <div ref={teamSectionRef}>
           <TeamSection />
         </div>
@@ -39,4 +44,4 @@ const Team = () => {
   );
 };
 
-export default Team; 
+export default Team;

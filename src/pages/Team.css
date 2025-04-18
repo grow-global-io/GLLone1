@@ -1,6 +1,7 @@
 .team-page {
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(180deg, #05005b , #520045 );
 }
 
 .page-content {
@@ -39,7 +40,7 @@
   transform: translateY(5px);
 }
 
-.scroll-down-arrow span {
+/* .scroll-down-arrow span {
   display: block;
   width: 20px;
   height: 20px;
@@ -48,7 +49,7 @@
   transform: rotate(45deg);
   margin: -10px;
   animation: scrollDownAnimation 2s infinite;
-}
+} */
 
 .scroll-down-arrow span:nth-child(2) {
   animation-delay: -0.2s;
