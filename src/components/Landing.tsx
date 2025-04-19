@@ -5,7 +5,7 @@ import landingVideo from '../assets/video1.mp4';
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
     // Ensure video plays on load
