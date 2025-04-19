@@ -5,6 +5,7 @@ import landingVideo from '../assets/video1.mp4';
 const Landing = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
     // Ensure video plays on load
@@ -32,7 +33,7 @@ const Landing = () => {
         if (videoTop > windowHeight || videoBottom < 0) {
           videoRef.current.muted = true;
         } else {
-          videoRef.current.muted = false;
+          videoRef.current.muted = isMuted;
         }
       }
     };
@@ -47,7 +48,7 @@ const Landing = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isMuted]);
 
   const togglePlayPause = () => {
     if (videoRef.current) {
@@ -57,6 +58,13 @@ const Landing = () => {
         videoRef.current.play();
       }
       setIsPlaying(!isPlaying);
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
     }
   };
 
@@ -83,7 +91,7 @@ const Landing = () => {
             loop
             playsInline
             className="landing-image"
-            // muted={true}
+            muted={isMuted}
           />
           <div className="image-overlay"></div>
           <button 
@@ -92,6 +100,13 @@ const Landing = () => {
             aria-label={isPlaying ? "Pause video" : "Play video"}
           >
             {isPlaying ? "❚❚" : "▶"}
+          </button>
+          <button 
+            className="video-mute-btn" 
+            onClick={toggleMute}
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            {isMuted ? "🔇" : "🔊"}
           </button>
         </div>
       </div>
