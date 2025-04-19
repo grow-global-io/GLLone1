@@ -26,6 +26,7 @@ const Step1: React.FC<Step1Props> = ({ formData, onNext }) => {
         international: formData.international || false,
         terms: formData.terms || false
     });
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value, type, checked } = e.target;
@@ -62,16 +63,22 @@ const Step1: React.FC<Step1Props> = ({ formData, onNext }) => {
             return;
         }
 
-        await fetch(`${process.env.REACT_APP_API_URL}/personal-details`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(form)
-        });
-        
+        setIsLoading(true); // Start loading
 
-        onNext(form);
+        try {
+            await fetch(`${process.env.REACT_APP_API_URL}/personal-details`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form)
+            });
+            
+            onNext(form);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setIsLoading(false); // Stop loading on error
+        }
     };
 
     return (
@@ -190,7 +197,20 @@ const Step1: React.FC<Step1Props> = ({ formData, onNext }) => {
                             />
                             <label className="form-check-label" htmlFor="terms">I agree to the terms and services</label>
                         </div>
-                        <button type="submit" className="btn btn-primary btn-lg w-100 py-2 py-md-3">Next →</button>
+                        <button 
+                            type="submit" 
+                            className="btn btn-primary btn-lg w-100 py-2 py-md-3" 
+                            disabled={isLoading}
+                        >
+                            {isLoading ? (
+                                <>
+                                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                    Processing...
+                                </>
+                            ) : (
+                                'Next →'
+                            )}
+                        </button>
                     </form>
                     
                 </div>
@@ -199,4 +219,4 @@ const Step1: React.FC<Step1Props> = ({ formData, onNext }) => {
     );
 };
 
-export default Step1; 
+export default Step1;
