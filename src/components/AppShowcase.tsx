@@ -1,9 +1,16 @@
 import React from 'react';
 import './AppShowcase.css';
-
+// import '../pages/Rewards/index.tsx'
+import { useNavigate } from 'react-router-dom';
 import phoneGif from '../assets/GIFs/GLLHome.gif';
 
 const AppShowcase = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate('/rewards');
+  };
+
   return (
     <div className="app-showcase">
       <div className="app-showcase-content">
@@ -17,7 +24,7 @@ const AppShowcase = () => {
             <p className="product-benefits">
               GLL ions opens business owners access to SaaS subscription based digital tools like e-signing suite, AI agents for finance and even authenticity certificates that are globally verifiable.
             </p>
-            <button className="learn-more-btn">LEARN MORE</button>
+            <button className="learn-more-btn" onClick={handleLearnMoreClick}>LEARN MORE</button>
           </div>
         </div>
         
