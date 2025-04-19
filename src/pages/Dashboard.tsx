@@ -68,7 +68,7 @@ const Dashboard: React.FC = () => {
           <div className="stats-grid">
           <div className="">
               <div className="qr-code-container">
-                <p className="qr-code-label">Your GVC Code</p>
+                <p className="qr-code-label">GVC Code</p>
                 <img 
                   src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=GLL_BUSINESS_ID_123456789" 
                   alt="Business QR Code" 
