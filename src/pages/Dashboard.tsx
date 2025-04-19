@@ -80,6 +80,7 @@ const Dashboard: React.FC = () => {
                   </button>
                 </div>
                 <div className="qr-code-username">
+                  <div>GllTag:</div>
                   @tatz234gll
                   <button className="copy-button" onClick={handleCopyClick} title="Copy to clipboard">
                     <FaCopy size={16} />
