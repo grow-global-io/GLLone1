@@ -106,6 +106,7 @@ const RewardsPage: React.FC = () => {
       try{
         const auth = getAuthProvider()
         const userInfo = await auth.getUser();
+        console.log("userInfo", userInfo)
         toast.success(`Welcome ${userInfo?.email} !!`)
       }catch(error){
         toast.error(`Please Login `) 

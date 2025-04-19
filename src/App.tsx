@@ -1,4 +1,4 @@
-import React, { ReactNode, ElementType } from 'react';
+import React, { ReactNode, useEffect, ElementType } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
@@ -8,12 +8,14 @@ import Team from './pages/Team';
 import Investment from './pages/Investment';
 import { bsc, bscTestnet, xdcTestnet, xdc } from "wagmi/chains";
 import '@rainbow-me/rainbowkit/styles.css';
-
+import {getAuthProvider} from "./arcanaAuth";
+import { useAccount, useNetwork } from 'wagmi'
 import { WagmiConfig, configureChains, createClient } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import { connectors } from "./wallet";
 import { darkTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
 // Import Rewards pages
 import { GllProvider } from './pages/Rewards/GLLContext';
@@ -44,6 +46,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => (
 
 function App() {
   const { chains, provider } = configureChains([xdc], [publicProvider()])
+  
+  
 
   // Define prop types for Disclaimer
   interface DisclaimerProps {
@@ -85,7 +89,7 @@ function App() {
                   <Route path="/" element={<MainLayout><Home /></MainLayout>} />
                   <Route path="/team" element={<MainLayout><Team /></MainLayout>} />
                   <Route path="/register" element={<MainLayout><Register /></MainLayout>} />
-                  
+                  <Route path='/dashboard' element={<MainLayout><Dashboard /></MainLayout>} />
                   {/* Rewards routes */}
                   <Route path="/rewards" element={<MainLayout><RewardsPage /></MainLayout>} />
                   <Route path="/rewards/card1" element={<MainLayout><Card1 /></MainLayout>} />

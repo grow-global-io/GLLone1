@@ -1,0 +1,58 @@
+/* Points Counter Styles */
+.points-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(55, 55, 81, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    backdrop-filter: blur(5px);
+}
+
+.balance-text {
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#points {
+    font-weight: 700;
+    color: #f0f0f0;
+}
+
+.button-container {
+    width: 100%;
+}
+
+.buy-ions-button {
+    width: 100%;
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buy-ions-button:hover {
+    background: linear-gradient(to right, #27ae60, #219653);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buy-ions-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+} 
